@@ -1,10 +1,12 @@
-package java_spring.TP1;
+package java_spring.TP2;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.context.annotation.Import;
 
+@Import(TestcontainersConfiguration.class)
 @SpringBootTest
-class Tp1ApplicationTests {
+class Tp2ApplicationTests {
 
 	@Test
 	void contextLoads() {
