@@ -1,4 +1,4 @@
-package java_spring.TP2;
+package java_spring.TP3;
 
 import org.springframework.boot.test.context.TestConfiguration;
 import org.springframework.boot.testcontainers.service.connection.ServiceConnection;

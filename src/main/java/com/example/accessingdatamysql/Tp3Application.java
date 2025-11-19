@@ -1,13 +1,13 @@
-package java_spring.TP2;
+package com.example.accessingdatamysql;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class Tp2Application {
+public class Tp3Application {
 
 	public static void main(String[] args) {
-		SpringApplication.run(Tp2Application.class, args);
+		SpringApplication.run(Tp3Application.class, args);
 	}
 
 }

@@ -1,0 +1,45 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Tp3Application",
+            "request": "launch",
+            "mainClass": "com.example.accessingdatamysql.Tp3Application",
+            "projectName": "TP3"
+        },
+        {
+            "type": "java",
+            "name": "Tp3Application",
+            "request": "launch",
+            "mainClass": "java_spring.TP3.Tp3Application",
+            "projectName": "TP3"
+        },
+        {
+            "type": "java",
+            "name": "Tp3Application",
+            "request": "launch",
+            "mainClass": "java_spring.TP3.Tp3Application",
+            "projectName": "TP1"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-AccessingDataMysqlApplication<TP3>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.example.accessingdatamysql.AccessingDataMysqlApplication",
+            "projectName": "TP3",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-TestTp3Application<TP3>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "java_spring.TP3.TestTp3Application",
+            "projectName": "TP3",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
