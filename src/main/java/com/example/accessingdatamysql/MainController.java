@@ -50,4 +50,14 @@ public class MainController {
         })
         .orElse(null);
   }
+
+  @GetMapping(path = "/delete/{id}")
+  public String deleteUser(@PathVariable Integer id) {
+    return userRepository.findById(id)
+        .map(user -> {
+          userRepository.deleteById(id);
+          return "User deleted successfully";
+        })
+        .orElse("User not found");
+  }
 }
