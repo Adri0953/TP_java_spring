@@ -41,4 +41,14 @@ public class ArticleController {
     public Article getArticleById(@PathVariable Integer id) {
         return articleRepository.findById(id).orElse(null);
     }
+
+        @DeleteMapping(path = "/delete/{id}")
+    public String deleteArticle(@PathVariable Integer id) {
+        return articleRepository.findById(id)
+            .map(article -> {
+                articleRepository.deleteById(id);
+                return "Article supprimé avec succès";
+            })
+            .orElse("Article non trouvé");
+    }
 }
