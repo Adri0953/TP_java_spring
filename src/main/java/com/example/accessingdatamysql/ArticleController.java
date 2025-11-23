@@ -36,4 +36,9 @@ public class ArticleController {
     public Iterable<Article> getAllArticles() {
         return articleRepository.findAll();
     }
+
+    @GetMapping(path = "/{id}")
+    public Article getArticleById(@PathVariable Integer id) {
+        return articleRepository.findById(id).orElse(null);
+    }
 }
