@@ -42,13 +42,26 @@ public class ArticleController {
         return articleRepository.findById(id).orElse(null);
     }
 
-        @DeleteMapping(path = "/delete/{id}")
+    @PutMapping(path = "/update/{id}")
+    public String updateArticle(@PathVariable Integer id, @RequestParam String title, @RequestParam String content) {
+        return articleRepository.findById(id)
+                .map(article -> {
+                    article.setTitle(title);
+                    article.setContent(content);
+                    article.setLastModifiedDate(java.time.LocalDateTime.now());
+                    articleRepository.save(article);
+                    return "Article modifié avec succès";
+                })
+                .orElse("Article non trouvé");
+    }
+
+    @DeleteMapping(path = "/delete/{id}")
     public String deleteArticle(@PathVariable Integer id) {
         return articleRepository.findById(id)
-            .map(article -> {
-                articleRepository.deleteById(id);
-                return "Article supprimé avec succès";
-            })
-            .orElse("Article non trouvé");
+                .map(article -> {
+                    articleRepository.deleteById(id);
+                    return "Article supprimé avec succès";
+                })
+                .orElse("Article non trouvé");
     }
 }
